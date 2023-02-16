@@ -1,0 +1,18 @@
+#ready {
+border: 1px solid black;
+  }
+
+  #screenOne {
+    visibility: visible;
+  }
+
+
+#screenTwo {
+    visibility: hidden;
+  }
+
+
+#screenThree {
+    visibility: hidden;
+}
+
