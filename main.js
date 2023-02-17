@@ -1,36 +1,66 @@
 /*----- constants -----*/
-let color = ['RED', 'ORANGE','YELLOW','GREEN', 'BLUE','PURPLE','BLACK','WHITE','PINK','BROWN','GREY']
+let winCount = 5;
+
+const color = ['RED', 'ORANGE','YELLOW','GREEN', 'BLUE','PURPLE','BLACK','WHITE','PINK','BROWN','GREY']
+
+let i = Math.floor((Math.random()*color.length));
+let j = i;
+
+while( i === j) {
+j = Math.floor((Math.random()*color.length));
+}
+//rizvan suggestion
+
+/* colorCard = [
+    {background:color[i], colorWord: color[j]},
+    {background:color[i], colorWord: color[j]},
+    {background:color[i], colorWord: color[j]},
+    {background:color[i], colorWord: color[j]}, 
+    ] */
+
+// ernest suggestion
 
 /*----- state variables -----*/
 
 
 /*----- cached elements  -----*/
-const readyBtn = document.querySelector('button');
 const screenOne = document.querySelector('#screenOne');
 const screenTwo = document.querySelector('#screenTwo');
-const screenThree = document.querySelector('#screenThree')
-const answerButton = document.querySelector('.answerbutton');
+const screenThree = document.querySelector('#screenThree');
 
+const readyBtn = document.querySelector('#ready');
+const leftBtn = document.querySelector('#buttonone');
+const rightBtn = document.querySelector('#buttontwo');
 
-// stretch goals:how shall i make use of array to store different screen id?
+const startGame = document.querySelector('#startGame');
+const startBtn = document.querySelector('#startagain');
 
-const startGame = document.querySelector('#startGame')
+const timer = document.querySelector('#timer');
 
 /*----- event listeners -----*/
-readyBtn.addEventListener('click', changeScreen);
+readyBtn.addEventListener('click', changeScreenOne);
 startGame.addEventListener('click', changeScreenTwo);
-answerButton.addEventListener('click', newCard);
+leftBtn.addEventListener('click', newCard);
+rightBtn.addEventListener('click', newCard);
+
 // stretch goals: how shall i make use of array to perform same action on different id attributes?
 
 /*----- functions -----*/
 
-function changeScreen(event){
+function changeScreenOne(event){
 event.preventDefault();
 event.target.parentElement.remove();
 screenTwo.style.visibility = 'visible';
 }
-// stretch goals: how shall i update the visibility of the subsequent screen to visible using event.target?
 
+function changeScreenTwo(event){
+    event.preventDefault();
+    event.target.parentElement.remove();
+    event.target.parentNode.style.visibility = 'hidden';
+    screenThree.style.visibility = 'visible'; 
+}
+
+// stretch goals: how shall i update the visibility of the subsequent screen to visible using event.target?
 
 function newCard(event){
 event.preventDefault();
@@ -38,32 +68,43 @@ event.target.parentElement.remove();
 let createP = document.createElement('p');
 createP.setAttribute('id', 'score');
 createP.innerText = '0/15';
-
+// find similarities in the code and call it repetitively
 let createDiv = document.createElement('div');
 createDiv.setAttribute('id', 'colorcard' );
-let createBtn = document.createElement('button');
-createBtn.setAttribute('class', 'answerbutton');
-createDiv.innerHTML = color[0];
-createDiv.style.backgroundColor = color[6];     
-createBtn.innerHTML = color[2]
+let leftBtn = document.createElement('button');
+let rightBtn = document.createElement('button')
+
+leftBtn.setAttribute('class', 'answerbutton');
+rightBtn.setAttribute('class', 'answerbutton');
+
+createDiv.innerHTML = color[i]
+createDiv.style.backgroundColor = color[j];     
+leftBtn.innerHTML = color[i];
+rightBtn.innerHTML = color[j];
 
 document.querySelector('body').append(createP);
 document.querySelector('body').append(createDiv);
-document.querySelector('body').append(createBtn);
+document.querySelector('body').append(leftBtn, rightBtn);
 }
 
-// how to create the second button and compare the results?
+
+// how to repeat the process everytime player clickes answerbutton?
+// how to compare the results? 
 // once answer compared, restart newCard
 
+//timer function
 
-
-
-
-function changeScreenTwo(event){
-event.preventDefault();
-event.target.parentElement.remove();
-event.target.parentNode.style.visibility = 'hidden';
-screenThree.style.visibility = 'visible';
-
-
+/* let timerId = setInterval(countdown, 1000);
+let timeLeft = 3;
+function countdown() {
+if (timeLeft == -1) {
+screenThree.style.visibility = 'hidden';
+} else {
+    timer.innerHTML = timeLeft + ' Seconds Remaining';
+    timeLeft--;
+  }
 }
+
+*/
+// reference from https://stackoverflow.com/questions/4435776/simple-clock-that-counts-down-from-30-seconds-and-executes-a-function-afterward
+
