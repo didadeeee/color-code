@@ -1,18 +1,52 @@
-#ready {
-border: 1px solid black;
-  }
+*{
+font-family: 'DM Sans', sans-serif;
+}
 
-  #screenOne {
-    visibility: visible;
-  }
+#screenOne {
+  visibility: visible;
+}
 
 
 #screenTwo {
-    visibility: hidden;
-  }
-
+  visibility: visible;
+}
 
 #screenThree {
-    visibility: hidden;
+  visibility: visible;
 }
+
+
+#score {
+text-align:right;
+margin: auto;
+font-size: 50px;
+text-align: right;
+padding: 1em 0 1em 0;
+vertical-align:middle;
+}
+
+#colorcard {
+color: white;
+height: 200px;
+width:800px;
+background-color:red;
+font-size: 100px;
+text-align: center;
+padding: 2em 0 2em 0;
+vertical-align:middle;
+margin: auto;
+}
+
+.answerbutton {
+display: flex;
+align-items: center;
+justify-content: space-around;
+gap:10px;
+height: 100px;
+width: 300px;
+font-size:50px;
+vertical-align:middle;
+}
+
+
 
