@@ -7,11 +7,6 @@ let timeLeft = 30;
 /*----- state variables -----*/
 
 const colors = ['RED', 'ORANGE','YELLOW','GREEN', 'BLUE','PURPLE','BLACK','WHITE','PINK','BROWN','GREY']
-let i = Math.floor((Math.random()*colors.length));
-let j = i;
-while( i === j){
-j = Math.floor((Math.random()*colors.length));
-}
 
 //rizvan suggestion
 
@@ -31,6 +26,8 @@ let buttonTwo = document.querySelector('#buttontwo');
 let score = document.querySelector('#score');
 let timer = document.querySelector('#timer');
 let result = document.querySelector('#result');
+let play = document.querySelector('.musicplay');
+let stop = document.querySelector('.musicstop');
 
 /*----- event listeners -----*/
 startBtn.addEventListener('click', gameStart);
@@ -52,6 +49,7 @@ function gameStart (event){
 event.preventDefault();
 event.target.parentElement.style.display = 'none';   
 }
+
 function winCount (event){
 if (event.target.innerText === colorCard.innerText) {
 count+=1;
@@ -63,21 +61,22 @@ score.innerHTML = `${count} of 15`;
 
 // how to stop the game when count reach 15
 
-
 function colorChange(){
-colorCard.style.backgroundColor = colors[i];
-colorCard.innerText = colors[i];
-buttonOne.innerText = colors[j]
-buttonTwo.innerText = colors[i]
+let randomColorOne = Math.floor(Math.random()*colors.length);
+let randomColorTwo = Math.floor(Math.random()*colors.length);
+while (randomColorOne === randomColorTwo){
+randomColorTwo = Math.round(Math.random()*colors.length);
 }
-
-// how to call for colorChange everytime player clickes buttonOne or buttonTwo/after compare answer
-
+colorCard.style.backgroundColor = colors[randomColorOne];
+colorCard.innerText = colors[randomColorTwo];
+buttonOne.innerText = colors[randomColorTwo];
+buttonTwo.innerText = colors[randomColorOne];
+}
 
 //timer function - reference from https://stackoverflow.com/questions/4435776/simple-clock-that-counts-down-from-30-seconds-and-executes-a-function-afterward
 
 
-function countdown() {
+function countdown(event) {
 if (timeLeft == -1) {
 } else {
     timer.innerText =  `${timeLeft} Seconds Remaining`;
