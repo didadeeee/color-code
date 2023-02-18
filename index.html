@@ -9,28 +9,31 @@
     <script defer src="main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet">
 <body>
-    <container id="screenOne">
+
+    <!-- Welcome -->
+    <section id="welcomecontainer">
     <h1>WELCOME TO THE COLOR CODE GAME</h1>
-    <h2>ARE YOU READY TO MESS YOUR BRAIN?</h2>
-    <button id="ready">I AM READY!</button>
-</container>
-<container id="screenTwo">
-    <h1>INSTRUCTIONS</h1>
     <p>1. There will be unique cards displaying the colour word presented with different colour combinations.<br>2. Select 15 right colour of the word within 30 seconds!</p>
-    <img src="sample.png" alt="Sample Game"><br>
-    <button id="startGame">START THE GAME!</button>
-</container>
-<container id="screenThree">
-    <p id="score">0/15</p>
-    <div id='colorcard'=>PURPLE</div>
-    <p id="timer"></p><button class="answerbutton" id="buttonone">PURPLE</button><button class="answerbutton" id="buttontwo">WHITE</button>
-</container>
-<container id="screenFour">
+    <img src="sample.png" alt="Sample Game"><button id="startgame">START THE GAME!</button>
+    </section>
+
+    <!-- Game -->
+    <section id="gamecontainer">
+    <div id="score"></div>
+    <div id="timer"></div>
+    <div id="colorcard">PURPLE</div>
+    <button class="answerbutton" id="buttonone">PURPLE</button>
+    <button class="answerbutton" id="buttontwo">WHITE</button>
+    </section>
+    
+
+    <!-- Result -->
+    <section id="result">
     <h1>Congrats! You Won!</h1>
-    <button class="answerbutton" id="startagain">Start Again?</button>
-</container>
+    <button id="startagain">START AGAIN?</button>
+    </section>
+
 </body>
 </html>
