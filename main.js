@@ -45,10 +45,10 @@ event.preventDefault();
 event.target.parentElement.style.display = 'none';
 }
 
-function gameStart (event){
-event.preventDefault();
-event.target.parentElement.style.display = 'none';   
+function gameEnd (){
+console.log('test')
 }
+// no event associated and have slightly different behaviour
 
 function winCount (event){
 if (event.target.innerText === colorCard.innerText) {
