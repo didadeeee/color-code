@@ -12,29 +12,30 @@
       rel="stylesheet"/>
 <body>
 
-    <!-- Welcome -->
-    <div class="wrapper">
-    <div id="welcomecontainer">
-    <h1>WELCOME TO THE COLOR CODE GAME</h1>
+    <!-- Instruction -->
+    <div class="maincontainer">
+    <div id="header">
+    <h1>THE COLOR CODE GAME</h1></div>
+    <div id="instruction">
     <p>1. There will be unique cards displaying the colour word presented with different colour combinations.<br>2. Select 15 right colour of the word within 30 seconds!</p>
-    <img src="sample.png" alt="Sample Game"><button id="startgame">START THE GAME!</button>
-    </div></div>
+    <img src="/images/sample.png" alt="Sample Game"><button id="startgame">START THE GAME!</button>
+    </div>
 
     <!-- Game -->
-    <section id="gamecontainer">
-    <div id="score"></div>
+    <div id="game">
+    <h2 id="score"></h2>
+    <div id="colorcard"></div>
     <div id="timer"></div>
-    <div id="colorcard">PURPLE</div>
-    <button class="answerbutton" id="buttonone">PURPLE</button>
-    <button class="answerbutton" id="buttontwo">WHITE</button>
-    </section>
-    
-
+    <div class="answerbutton"><button id="buttonone">PURPLE</button>
+    <button id="buttontwo">WHITE</button>
+    </div>
+ 
     <!-- Result -->
-    <section id="result">
+    <div id="result">
     <h1>Congrats! You Won!</h1>
-    <button id="startagain">START AGAIN?</button>
-    </section>
+    <button id="startagain">START AGAIN?</button></div>
+    </div>
+
 
 </body>
 </html>
