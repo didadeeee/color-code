@@ -10,32 +10,39 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"/>
-<body>
-
-    <!-- Instruction -->
+<div>
+    
     <div class="maincontainer">
-    <div id="header">
-    <h1>THE COLOR CODE GAME</h1></div>
-    <div id="instruction">
-    <p>1. There will be unique cards displaying the colour word presented with different colour combinations.<br>2. Select 15 right colour of the word within 30 seconds!</p>
-    <img src="/images/sample.png" alt="Sample Game"><button id="startgame">START THE GAME!</button>
-    </div>
+        <div id="header"></div>
+        <audio controls autoplay muted>
+            <source src="backgroundmusic.mp3" type="audio/mpeg">
+        </audio>
+        <h1>THE COLOR CODE GAME</h1>
 
-    <!-- Game -->
-    <div id="game">
-    <h2 id="score"></h2>
-    <div id="colorcard"></div>
-    <div id="timer"></div>
-    <div class="answerbutton"><button id="buttonone">PURPLE</button>
-    <button id="buttontwo">WHITE</button>
-    </div>
- 
-    <!-- Result -->
-    <div id="result">
-    <h1>Congrats! You Won!</h1>
-    <button id="startagain">START AGAIN?</button></div>
-    </div>
+        <!-- Instruction -->
+        <div id="instruction">
+            <p>1. There will be unique cards displaying the colour word presented with different colour combinations.<br>2. Select 15 right colour of the word within 30 seconds!</p>
+            <img src="/images/sample.png" alt="Sample Game"><button id="startgame">START THE GAME!</button>
+        </div>
 
+        <!-- Game -->
+        <div id="game">
+            <h2 id="score"></h2>
+            <div id="colorcard">PURPLE</div>
+            <div id="timer"></div>
+            <div>
+                <button class="answer" id="buttonone">PURPLE</button>
+                <button class="answer" id="buttontwo">WHITE</button>
+                <button class="answer" id="buttonthree">BLACK</button>
+            </div>
+        </div>
 
+        <!-- Result -->
+        <div id="result">
+            <h1 id="playerresult"></h1>
+            <button id="startbutton">START AGAIN?</button>
+        </div>
+    </div>
+        
 </body>
 </html>

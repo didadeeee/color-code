@@ -41,7 +41,6 @@ margin-bottom: 20px;
 }
 
 #instruction {
-display: visible;
 font-size: 20px;
 text-align: center;
 color: black;
@@ -57,14 +56,12 @@ margin: 30px;
 }
 
 #game {
-display: visible;
 text-align: center;
 color: black;
 font-size: 20px;
 }
 
 #result {
-display: visible;
 text-align: center;
 color: #ff5e5b;
 font-size: 20px;
