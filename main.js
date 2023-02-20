@@ -1,10 +1,10 @@
 /*----- constants -----*/
 let count = 0;
 let totalGames = 15;
-let timeLeft = 3;
+let timeLeft = 30;
 
 /*----- state variables -----*/
-colors = [
+let colors = [
   "RED",
   "ORANGE",
   "YELLOW",
@@ -20,19 +20,34 @@ colors = [
 
 /*----- cached elements  -----*/
 let instructionScreen = document.querySelector("#instruction");
-let startBtn = document.querySelector("#startgame");
 let gameScreen = document.querySelector("#game");
-let colorCard = document.querySelector("#colorcard");
-let score = document.querySelector("#score");
-let timer = document.querySelector("#timer");
-let buttonOne = document.querySelector("#buttonone");
-let buttonTwo = document.querySelector("#buttontwo");
-let buttonThree = document.querySelector("#buttonthree");
 let resultScreen = document.querySelector("#result");
+
+let startBtn = document.querySelector("#startgame");
 let restartBtn = document.querySelector("#startbutton");
 let playerResult = document.querySelector("#playerresult");
 
+let colorCard = document.querySelector("#colorcard");
+let score = document.querySelector("#score");
+let timer = document.querySelector("#timer");
 
+let buttonOne = document.querySelector("#buttonone");
+let buttonTwo = document.querySelector("#buttontwo");
+let buttonThree = document.querySelector("#buttonthree");
+
+/*----- event listeners -----*/
+startBtn.addEventListener("click", gameStart);
+// set timer as soon as gamescreen starts - jeremy
+restartBtn.addEventListener("click", startAgain);
+
+let buttons = document.querySelectorAll(".answer");
+buttons.forEach((button) =>
+  button.addEventListener("click", (event) => {
+    winCount(event);
+  })
+);
+
+/*----- functions -----*/
 function changeScreen(currentScreen) {
   if (currentScreen === "instruction") {
     instructionScreen.style.display = "block";
@@ -50,23 +65,78 @@ function changeScreen(currentScreen) {
 }
 // wenda's guide
 
-/*----- event listeners -----*/
-
-restartBtn.addEventListener("click", startAgain);
-
-startBtn.addEventListener("click", gameStart);
-// set timer as soon as gamescreen starts - jeremy
-
-/*----- functions -----*/
-function startAgain() {
-changeScreen("instruction");
-}
-
-function gameStart(e) {
+/*----- instruction functions -----*/
+function gameStart(event) {
   countdown(timeLeft);
   changeScreen("game");
-  colorChange();
-  winCount(e);
+}
+
+/*----- game functions -----*/
+function winCount(event) {
+  if (count === 15) {
+    gameEnd();
+  } else {
+    let buttonColor = event.target.innerText.toLowerCase();
+    let cardColor = colorCard.style.color.toLowerCase();
+    if (buttonColor === cardColor) {
+      count += 1;
+      score.innerHTML = `${count} of ${totalGames}`;
+    } else {
+      score.innerHTML = `${count} of 15`;
+    }
+    colorChange();
+  }
+}
+
+// random 3 colors
+// randomly choose 3 colors from the colors array and cannot have repeat numbers
+// declare an array store non-repeat numbers
+// get random number
+// if exist then get random number again
+// if not then add to the numbers array
+// numbers array cannot more than 3
+
+function generateRandomColors() {
+  let numbers = [];
+  while (numbers.length < 3) {
+    let randomColor = Math.floor(Math.random() * colors.length);
+    if (numbers.includes(randomColor) !== true) {
+      numbers.push(randomColor);
+    }
+  }
+
+  const newColors = [];
+
+  numbers.forEach((number) => {
+    newColors.push(colors[number]);
+  });
+
+  return newColors;
+}
+
+function colorChange() {
+  let randomColors = generateRandomColors();
+  colorCard.style.backgroundColor = randomColors[0];
+  colorCard.innerText = randomColors[1];
+  colorCard.style.color = randomColors[2];
+
+  randomColors.sort();
+  buttonOne.innerText = randomColors[0];
+  buttonTwo.innerText = randomColors[1];
+  buttonThree.innerText = randomColors[2];
+}
+
+function countdown() {
+  timer.innerText = timeLeft + " SECONDS LEFT";
+
+  let interval = setInterval(function () {
+    timeLeft--;
+    timer.innerText = timeLeft + " SECONDS LEFT";
+    if (timeLeft < 1) {
+      gameEnd();
+      clearInterval(interval);
+    }
+  }, 1000);
 }
 
 function gameEnd() {
@@ -78,57 +148,12 @@ function gameEnd() {
   }
 }
 
-function winCount(event) {
-  if (event.target.innerText === colorCard.innerText) {
-    count += 1;
-    score.innerHTML = `${count} of ${totalGames}`;
-  }
-  if (count === 15) {
-    gameEnd();
-  } else {
-    score.innerHTML = `${count} of 15`;
-  }
-}
+/*----- result functions -----*/
 
-function colorChange() {
-  let randomColorOne = Math.floor(Math.random() * colors.length);
-  let randomColorTwo = Math.floor(Math.random() * colors.length);
-  let randomColorThree = Math.floor(Math.random() * colors.length);
-  while (
-    randomColorOne === randomColorTwo ||
-    randomColorOne === randomColorThree
-  ) {
-    randomColorOne = Math.round(Math.random() * colors.length);
-  }
-  colorCard.style.backgroundColor = colors[randomColorOne];
-  colorCard.innerText = colors[randomColorTwo];
-  colorCard.style.color = colors[randomColorThree];
-  // how shall i randomise the position of button one and two?
-  // how to make sure button one two three is not the same
-  // how to prevent undefined
-  buttonOne.innerText = colors[randomColorOne];
-  buttonTwo.innerText = colors[randomColorTwo];
-  buttonThree.innerText = colors[randomColorThree];
-}
-//rizvan help
-
-let buttons = document.querySelectorAll(".answer");
-buttons.forEach((button) =>
-  button.addEventListener("click", (e) => {
-    colorChange();
-    winCount(e);
-  })
-);
-
-// alice's help - calling 2 functions for a list of buttons
-
-function countdown(seconds) {
-  let interval = setInterval(function () {
-    timer.innerText = seconds + " seconds left";
-    seconds--;
-    if (seconds < 0) {
-      gameEnd();
-      clearInterval(interval);
-    }
-  }, 1000);
+function startAgain() {
+  count = 0;
+  timeLeft = 30;
+  timer.innerText = "";
+  score.innerText = "0 of 15";
+  changeScreen("instruction");
 }

@@ -1,48 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Color Code Game</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="main.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"/>
-<div>
-    
-    <div class="maincontainer">
-        <div id="header"></div>
-        <audio controls autoplay muted>
-            <source src="backgroundmusic.mp3" type="audio/mpeg">
-        </audio>
-        <h1>THE COLOR CODE GAME</h1>
-
-        <!-- Instruction -->
-        <div id="instruction">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>The Color Code Game</title>
+      <link rel="stylesheet" href="style.css">
+      <script defer src="main.js"></script>
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+         rel="stylesheet"/>
+   <body>
+      <div class="maincontainer">
+         <div id="header"></div>
+         <h1>THE COLOR CODE GAME</h1>
+         <!-- Instruction -->
+         <div id="instruction">
             <p>1. There will be unique cards displaying the colour word presented with different colour combinations.<br>2. Select 15 right colour of the word within 30 seconds!</p>
-            <img src="/images/sample.png" alt="Sample Game"><button id="startgame">START THE GAME!</button>
-        </div>
-
-        <!-- Game -->
-        <div id="game">
-            <h2 id="score"></h2>
+            <img src="/images/sample.png" alt="Sample Game">
+            <button id="startgame">START THE GAME!</button>
+         </div>
+         <!-- Game -->
+         <div id="game">
+            <h2 id="score">0 of 15</h2>
             <div id="colorcard">PURPLE</div>
             <div id="timer"></div>
             <div>
-                <button class="answer" id="buttonone">PURPLE</button>
-                <button class="answer" id="buttontwo">WHITE</button>
-                <button class="answer" id="buttonthree">BLACK</button>
+               <button class="answer" id="buttonone">PURPLE</button>
+               <button class="answer" id="buttontwo">WHITE</button>
+               <button class="answer" id="buttonthree">BLACK</button>
             </div>
-        </div>
-
-        <!-- Result -->
-        <div id="result">
+         </div>
+         <!-- Result -->
+         <div id="result">
             <h1 id="playerresult"></h1>
             <button id="startbutton">START AGAIN?</button>
-        </div>
-    </div>
-        
-</body>
+         </div>
+      </div>
+   </body>
 </html>

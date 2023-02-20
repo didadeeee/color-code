@@ -19,10 +19,10 @@ font-size: 20px;
 
 .maincontainer {
 width: 800px;
-height: 400px;
 margin: auto;
 padding: 80px;
 background-color: #ffffea;
+padding-bottom: 120px;
 }
 
 #score {
@@ -41,6 +41,7 @@ margin-bottom: 20px;
 }
 
 #instruction {
+display: block;
 font-size: 20px;
 text-align: center;
 color: black;
@@ -56,12 +57,14 @@ margin: 30px;
 }
 
 #game {
+display: none;
 text-align: center;
 color: black;
 font-size: 20px;
 }
 
 #result {
+display:none;
 text-align: center;
 color: #ff5e5b;
 font-size: 20px;
