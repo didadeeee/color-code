@@ -12,7 +12,7 @@ With The Color Code Game, you get to experience The Stroop Effect while getting 
 
 ### **Game Background**
 **The Stroop Effect**
-![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Stroop_comparison.png/435px-Stroop_comparison.png "The Stroop Effect")
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Stroop_comparison.png/435px-Stroop_comparison.png "The Stroop Effect") <br/>
 In psychology, the Stroop effect is the delay in reaction time between congruent and incongruent stimuli. It was named after John Ridley Stroop.
 The theory explains through a basic task that demonstrates the effect occurs when there is a mismatch between the name of a color (e.g., "blue", "green", or "red") and the color it is printed on (i.e., the word "red" printed in blue ink instead of red ink). When asked to name the color of the word it takes longer and is more prone to errors when the color of the ink does not match the name of the color.
 
@@ -54,7 +54,7 @@ Play the game here: [I'm an inline-style link](https://didadeeee.github.io/color
 - Increased complexity of the game
 - Consider using the MVC Approach
 
-### **Biggest Challenge
+### **Biggest Challenge**
 ```javascript
 function colorChange() {
   let randomColors = generateRandomColors();
@@ -102,7 +102,7 @@ function colorChange() {
 }
 ```
 
-### **Key Learnings
+### **Key Learnings**
 ```javascript
 unction changeScreen(currentScreen) {
   if (currentScreen === "instruction") {
