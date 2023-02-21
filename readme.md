@@ -1,4 +1,4 @@
-#H1 **The Color Code Game**
+# H1**The Color Code Game**
 
 ##H3 **User Stories**
 -	As a player, I get to choose the right answer from a combination of unique colour cards & colour vocabularies.
