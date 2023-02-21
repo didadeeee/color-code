@@ -1,15 +1,15 @@
-# H1**The Color Code Game**
+# **The Color Code Game**
 
-##H3 **User Stories**
+## **User Stories**
 -	As a player, I get to choose the right answer from a combination of unique colour cards & colour vocabularies.
 -	As a player, I will experience The Stroop Effect while playing the colour code game.
 -	As a player, I can view my win count within 30 seconds.
 -	As a player, I get to see my ranking with other players. (Stretch)
 
-##H2 **Project Brief**
+## **Project Brief**
 With The Color Code Game, you get to experience The Stroop Effect while getting confused between the name of a color and the other properties around it (eg. the card color, the color of the word).
 
-###H3 **Game Background**
+### **Game Background**
 The Stroop Effect
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Stroop_comparison.png/435px-Stroop_comparison.png "The Stroop Effect")
 In psychology, the Stroop effect is the delay in reaction time between congruent and incongruent stimuli. It was named after John Ridley Stroop.
@@ -17,7 +17,7 @@ The theory explains through a basic task that demonstrates the effect occurs whe
 
 ***
 
-###H3 **Technical Requirements**
+### **Technical Requirements**
 - Render a game in the browser.
 - Include win/loss logic and render win/loss messages in HTML.
 - Include separate HTML, CSS & JavaScript files.
@@ -27,33 +27,33 @@ The theory explains through a basic task that demonstrates the effect occurs whe
 - Be coded in a consistent manner.
 - Game is deployed online.
 
-###H3 **Neccessary Deliverables**
+### **Neccessary Deliverables**
 The code for a working game that meets or exceeds the above technical requirements, built by you, and hosted.
 Frequent commits dating back to the very beginning of the project. Commit messages should be in the present tense.
 
 ***
 
-###H3 **Screenshots**
+### **Screenshots**
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 
-###H3 **Technologies & Tools Used**
+### **Technologies & Tools Used**
 1. HTML
 2. CSS
 3. JavaScript
 4. Git & GitHub
 
-###H3 **Getting Started**
-####H4 **Instructions**
+### **Getting Started**
+#### **Instructions**
 1. There will be 15 unique cards with the colour word presented in different combinations.
 2. Challenge: Guess as many colours within 30 seconds!
 Play the game here: [I'm an inline-style link](https://didadeeee.github.io/color-code/)
 
-###H3 **Next Steps**
+### **Next Steps**
 - Increased complexity of the game
 - Consider using the MVC Approach
 
-###H3 **Biggest Challenge###
+### **Biggest Challenge###
 ```javascript
 function colorChange() {
   let randomColors = generateRandomColors();
@@ -101,7 +101,7 @@ function colorChange() {
 }
 ```
 
-###H3 **Key Learnings###
+### **Key Learnings###
 ```javascript
 unction changeScreen(currentScreen) {
   if (currentScreen === "instruction") {
