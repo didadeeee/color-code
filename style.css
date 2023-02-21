@@ -11,10 +11,27 @@ margin-bottom: 10px;
 cursor: pointer;
 }
 
+#instruction .explanation {
+font-size: 30px;
+text-align: center;
+}
+
+.rectangle {
+background-color: #555;
+color: red;
+box-sizing: border-box;
+width: 400px;
+height: 200px;
+font-size: 80px;
+padding-top: 50px;
+margin: auto;
+margin-bottom: 20px;
+}
+
 #header {
 text-align: center;
 color: #ff5e5b;
-font-size: 20px;
+font-size: 40px;
 }
 
 .maincontainer {
@@ -38,11 +55,12 @@ font-size: 80px;
 padding-top: 50px;
 margin: auto;
 margin-bottom: 20px;
+background-color: white;
 }
 
 #instruction {
 display: block;
-font-size: 20px;
+font-size: 25px;
 text-align: center;
 color: black;
 }
@@ -67,5 +85,6 @@ font-size: 20px;
 display:none;
 text-align: center;
 color: #ff5e5b;
-font-size: 20px;
+font-size: 40px;
+margin: auto;
 }

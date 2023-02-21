@@ -57,6 +57,8 @@ function changeScreen(currentScreen) {
     gameScreen.style.display = "block";
     instructionScreen.style.display = "none";
     resultScreen.style.display = "none";
+    colorCard.innerText = "PURPLE";
+    colorCard.style.color = "black";
   } else if (currentScreen === "result") {
     resultScreen.style.display = "block";
     instructionScreen.style.display = "none";
@@ -67,8 +69,8 @@ function changeScreen(currentScreen) {
 
 /*----- instruction functions -----*/
 function gameStart(event) {
-  countdown(timeLeft);
   changeScreen("game");
+  countdown(timeLeft);
 }
 
 /*----- game functions -----*/
@@ -125,7 +127,7 @@ function colorChange() {
   buttonTwo.innerText = randomColors[1];
   buttonThree.innerText = randomColors[2];
 }
-
+// consider using array to create five buttons
 function countdown() {
   timer.innerText = timeLeft + " SECONDS LEFT";
 
@@ -142,9 +144,9 @@ function countdown() {
 function gameEnd() {
   changeScreen("result");
   if (count > 7) {
-    playerResult.innerText = `CONGRATS! You got ${count} out of ${totalGames}`;
+    playerResult.innerText = `NICE! You got ${count} out of ${totalGames}`;
   } else if (count < 7) {
-    playerResult.innerText = `You got ${count} out of ${totalGames}, Try Harder?`;
+    playerResult.innerText = `You got ${count} out of ${totalGames}, try harder next time!`;
   }
 }
 
