@@ -16,8 +16,12 @@ When asked to name the color of the word it takes longer and is more prone to er
 ---
 
 ### **Screenshots**
-
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+1. Welcome Screen  
+![welcome screen](./images/instruction.png "Welcome Screen") 
+2. Game Screen   
+![game screen](./images/game.png "Game Screen")  
+3. Result Screen  
+![result screen](./images/result.png "Result Screen")  
 
 ### **Technologies & Tools Used**
 
