@@ -1,6 +1,6 @@
 /*----- constants -----*/
 let count = 0;
-let totalGames = 15;
+let totalGames = 30;
 let timeLeft = 30;
 
 /*----- state variables -----*/
@@ -25,7 +25,6 @@ let resultScreen = document.querySelector("#result");
 
 let startBtn = document.querySelector("#startgame");
 let restartBtn = document.querySelector("#startbutton");
-let playerResult = document.querySelector("#playerresult");
 
 let colorCard = document.querySelector("#colorcard");
 let score = document.querySelector("#score");
@@ -35,9 +34,10 @@ let buttonOne = document.querySelector("#buttonone");
 let buttonTwo = document.querySelector("#buttontwo");
 let buttonThree = document.querySelector("#buttonthree");
 
+let playerResult = document.querySelector("#playerresult");
+
 /*----- event listeners -----*/
 startBtn.addEventListener("click", gameStart);
-// set timer as soon as gamescreen starts - jeremy
 restartBtn.addEventListener("click", startAgain);
 
 let buttons = document.querySelectorAll(".answer");
@@ -65,7 +65,6 @@ function changeScreen(currentScreen) {
     gameScreen.style.display = "none";
   }
 }
-// wenda's guide
 
 /*----- instruction functions -----*/
 function gameStart(event) {
@@ -75,7 +74,7 @@ function gameStart(event) {
 
 /*----- game functions -----*/
 function winCount(event) {
-  if (count === 15) {
+  if (count === 30) {
     gameEnd();
   } else {
     let buttonColor = event.target.innerText.toLowerCase();
@@ -84,19 +83,11 @@ function winCount(event) {
       count += 1;
       score.innerHTML = `${count} of ${totalGames}`;
     } else {
-      score.innerHTML = `${count} of 15`;
+      score.innerHTML = `${count} of ${totalGames}`;
     }
     colorChange();
   }
 }
-
-// random 3 colors
-// randomly choose 3 colors from the colors array and cannot have repeat numbers
-// declare an array store non-repeat numbers
-// get random number
-// if exist then get random number again
-// if not then add to the numbers array
-// numbers array cannot more than 3
 
 function generateRandomColors() {
   let numbers = [];
@@ -127,7 +118,7 @@ function colorChange() {
   buttonTwo.innerText = randomColors[1];
   buttonThree.innerText = randomColors[2];
 }
-// consider using array to create five buttons
+
 function countdown() {
   timer.innerText = timeLeft + " SECONDS LEFT";
 
@@ -143,10 +134,10 @@ function countdown() {
 
 function gameEnd() {
   changeScreen("result");
-  if (count > 7) {
-    playerResult.innerText = `NICE! You got ${count} out of ${totalGames}`;
-  } else if (count < 7) {
-    playerResult.innerText = `You got ${count} out of ${totalGames}, try harder next time!`;
+  if (count >= 15) {
+    playerResult.innerText = `Congrats! You got ${count} out of ${totalGames}!`;
+  } else if (count < 15) {
+    playerResult.innerText = `You got ${count} out of ${totalGames}!`;
   }
 }
 
@@ -156,6 +147,6 @@ function startAgain() {
   count = 0;
   timeLeft = 30;
   timer.innerText = "";
-  score.innerText = "0 of 15";
+  score.innerText = "0 of 30";
   changeScreen("instruction");
 }

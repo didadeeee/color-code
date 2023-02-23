@@ -1,6 +1,10 @@
 body {
-background-color: #ffed66;
 font-family: Helvetica;
+background-image: url("https://img.freepik.com/free-vector/flat-design-abstract-background_23-2149116123.jpg?w=1060&t=st=1677122246~exp=1677122846~hmac=02b46fa8fabe8d6dc23a2e01b52c56ea7cdc8dfa2da27763aaf4790dd38ad393");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+opacity: 0.8;
 }
 
 button {
@@ -26,20 +30,25 @@ font-size: 80px;
 padding-top: 50px;
 margin: auto;
 margin-bottom: 20px;
+text-align: center;
 }
 
-#header {
+button:hover{
+background-color: darkgrey;
+}
+
+h1 {
 text-align: center;
 color: #ff5e5b;
-font-size: 40px;
+font-size: 50px;
 }
 
 .maincontainer {
 width: 800px;
 margin: auto;
 padding: 80px;
-background-color: #ffffea;
-padding-bottom: 120px;
+background-color: white;
+opacity: 0.9;
 }
 
 #score {
@@ -48,6 +57,7 @@ margin-right: 100px;
 }
 
 #colorcard {
+border: 1px solid black;
 box-sizing: border-box;
 width: 400px;
 height: 200px;
@@ -84,7 +94,12 @@ font-size: 20px;
 #result {
 display:none;
 text-align: center;
-color: #ff5e5b;
-font-size: 40px;
+color: #003d5b;
+font-size: 20px;
 margin: auto;
+}
+
+#stroop {
+color: black;
+font-size: 20px;
 }

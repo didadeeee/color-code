@@ -30,8 +30,8 @@ When asked to name the color of the word it takes longer and is more prone to er
 
 #### **Instructions**
 
-1. There will be unique cards with the colour word presented in different combinations.
-2. Challenge: Get at least 8 colors within 30 seconds: [Play The Color Code Game Now](https://didadeeee.github.io/color-code/)
+1. There will be 30 unique cards with the colour word presented in different combinations.
+2. To Win: Get at least 15 colors right within 30 seconds: [Play The Color Code Game Now](https://didadeeee.github.io/color-code/)
 
 ### **Next Steps**
 
@@ -109,9 +109,15 @@ function changeScreen(currentScreen) {
 2. My own cheatsheet<br/>
 3. Learning priorities - Understanding the concept -> Be familiar with the key concepts -> CSSFlexbox/Grid -> Short hand synthax -> Dry code -> MVC<br/>
 4. Be patient by breaking problems to smaller problems - look at everything as input -> output<br/>
-5. Learning Barriers: Format, Indentation, Sequence matters A LOT - 1st layer & 2nd layer if else statements, HTML, if else syntax writing<br/>
+5. Mental Blocks: Format, Indentation, Sequence matters A LOT - 1st layer & 2nd layer if else statements, HTML, if else syntax writing<br/>
 6. Having an initial, precise plan (pseudocode) is very IMPORTANT!<br/></p>
 
 ### **Q&A**
 
 Thank you :)
+
+### **Resources**
+
+Timer function from <a href="https://stackoverflow.com/questions/4435776/simple-clock-that-counts-down-from-30-seconds-and-executes-a-function-afterward">stackoverflow</a><br/>
+Background Image by <a href="https://www.freepik.com/free-vector/flat-design-abstract-background_18895874.htm#query=background&position=29&from_view=keyword&track=sph">Freepik</a><br/>
+Color Palette by <a href="https://coolors.co/user/palettes">coolors<a>
