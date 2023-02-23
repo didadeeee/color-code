@@ -9,19 +9,20 @@ With The Color Code Game, you get to experience The Stroop Effect while getting 
 **The Stroop Effect**
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Stroop_comparison.png/435px-Stroop_comparison.png "The Stroop Effect") <br/>
 
-<p>Named after John Ridley Stroop, the Stroop effect is the delay in reaction time between congruent and incongruent stimuli.<br/>
-The theory explains through a basic task that demonstrates the effect occurs when there is a mismatch between the name of a color (e.g., "blue", "green", or "red") and the color it is printed on (i.e., the word "red" printed in blue ink instead of red ink). <br/>
-When asked to name the color of the word it takes longer and is more prone to errors when the color of the ink does not match the name of the color.</p>
+<p>Named after John Ridley Stroop, The Stroop effect is the delay in reaction time between congruent and incongruent stimuli.<br/>
+The theory explains through a basic task that demonstrates the effect occurs when there is a mismatch between the name of a color and the color it is printed on.<br/>
+It is demonstrated through the task that it takes longer time and is more prone to errors when both properties does not match.</p>
 
 ---
 
 ### **Screenshots**
+
 1. Welcome Screen  
-![welcome screen](./images/instruction.png "Welcome Screen") 
-2. Game Screen   
-![game screen](./images/game.png "Game Screen")  
+   ![welcome screen](./images/instruction.png "Welcome Screen")
+2. Game Screen  
+   ![game screen](./images/game.png "Game Screen")
 3. Result Screen  
-![result screen](./images/result.png "Result Screen")  
+   ![result screen](./images/result.png "Result Screen")
 
 ### **Technologies & Tools Used**
 
@@ -111,7 +112,7 @@ function changeScreen(currentScreen) {
 
 <p>1. Recognition of weaker areas - for loop/forEach; callback function; why return?<br/>
 2. My own cheatsheet<br/>
-3. Learning priorities - Understanding the concept -> Be familiar with the key concepts -> CSSFlexbox/Grid -> Short hand synthax -> Dry code -> MVC<br/>
+3. Learning priorities - Understanding the concept -> Be familiar with the key concepts -> MVC -> Dry Code -> Short hand synthax -> CSS Grid/Flexbox<br/>
 4. Be patient by breaking problems to smaller problems - look at everything as input -> output<br/>
 5. Mental Blocks: Format, Indentation, Sequence matters A LOT - 1st layer & 2nd layer if else statements, HTML, if else syntax writing<br/>
 6. Having an initial, precise plan (pseudocode) is very IMPORTANT!<br/></p>

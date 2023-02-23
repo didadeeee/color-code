@@ -1,10 +1,7 @@
 /*----- constants -----*/
-let count = 0;
-let totalGames = 30;
-let timeLeft = 30;
 
-/*----- state variables -----*/
-let colors = [
+const totalGames = 30;
+const colors = [
   "RED",
   "ORANGE",
   "YELLOW",
@@ -18,23 +15,27 @@ let colors = [
   "GREY",
 ];
 
+/*----- state variables  -----*/
+
+let count = 0;
+let timeLeft = 30;
+
 /*----- cached elements  -----*/
 let instructionScreen = document.querySelector("#instruction");
 let gameScreen = document.querySelector("#game");
 let resultScreen = document.querySelector("#result");
 
 let startBtn = document.querySelector("#startgame");
-let restartBtn = document.querySelector("#startbutton");
 
 let colorCard = document.querySelector("#colorcard");
 let score = document.querySelector("#score");
 let timer = document.querySelector("#timer");
-
 let buttonOne = document.querySelector("#buttonone");
 let buttonTwo = document.querySelector("#buttontwo");
 let buttonThree = document.querySelector("#buttonthree");
 
 let playerResult = document.querySelector("#playerresult");
+let restartBtn = document.querySelector("#startbutton");
 
 /*----- event listeners -----*/
 startBtn.addEventListener("click", gameStart);
