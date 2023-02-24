@@ -36,7 +36,7 @@ It is demonstrated through the task that it takes longer time and is more prone 
 #### **Instructions**
 
 1. There will be 30 unique cards with the colour word presented in different combinations.
-2. To Win: Get at least 15 colors right within 30 seconds: [Play The Color Code Game Now](https://didadeeee.github.io/color-code/)
+2. To Win: Get at least 15 colors of the colour word right within 30 seconds: [Play The Color Code Game Now](https://didadeeee.github.io/color-code/)
 
 ### **Next Steps**
 

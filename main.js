@@ -1,5 +1,4 @@
 /*----- constants -----*/
-
 const totalGames = 30;
 const colors = [
   "RED",
@@ -16,7 +15,6 @@ const colors = [
 ];
 
 /*----- state variables  -----*/
-
 let count = 0;
 let timeLeft = 30;
 
